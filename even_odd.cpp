@@ -4,10 +4,15 @@ int main(){
     int n;
     cin>>n;
     if(n%2==0){
-        cout<<"Even number";
+      goto Even;
     }
-    else {
-        cout<<"Odd Number";
+    else{
+        goto Odd;
     }
+     Even: 
+    cout<<"Even Number";
+    exit(0);
+    cout<<"Hii";
+    Odd: cout<<"Odd Number";
     return 0;
 }
