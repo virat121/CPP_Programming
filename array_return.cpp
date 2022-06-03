@@ -1,12 +1,15 @@
 #include <iostream>
 using namespace std;
-int* fun(){
-    static int arr[5]={1,2,3,4,5};
+int* fun(int arr[]){
+    
+     for(int i=0;i<5;++i){
+         arr[i]=i+1;
+     }
     return arr;
 }
 int main(){
-    int* p;
-    p=fun();
+    int* p,arr[100];
+    p=fun(arr);
     for(int i=0;i<5;i++){
         cout<<*(p+i)<<"\n";
     }
